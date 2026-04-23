@@ -312,7 +312,7 @@ function loadImg(pageNum) {
   if (imgCache[pageNum]) return Promise.resolve(imgCache[pageNum]);
   return new Promise(res => {
     const im = new Image();
-    im.src = `images/allpages-${String(pageNum).padStart(3,'0')}.jpg`;
+    im.src = `images1/allpages-${String(pageNum).padStart(3,'0')}.jpg`;
     im.onload = () => { imgCache[pageNum] = im; res(im); };
     im.onerror = () => res(null);
   });
